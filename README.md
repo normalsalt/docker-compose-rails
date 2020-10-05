@@ -10,16 +10,23 @@ https://docs.docker.com/compose/rails/
 
 Update `Dockerfile`.
 
+# up
+
+```
+docker-compose up -d
+docker-compose run --rm web rails db:create
+```
+
+Open `http://localhost:3000` in your browser.
+
 ## Rails version
 
 - 'rails', '~> 6.0', '>= 6.0.3.3'
 
 Update `Gemfile`.
 
-# up
+# build
 
 ```
-docker-compose up -d
+docker-compose up -d --build
 ```
-
-Open `http://localhost:3000` in your browser.
